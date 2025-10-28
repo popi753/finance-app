@@ -1,21 +1,22 @@
-import { Link } from "react-router-dom"
+import { Link,useLocation } from "react-router-dom"
 
 type sidebarItemProps = {
-    icon: string;
-    title: string;
+    arr: string[];
 }
 
-export default function SidebarItem({icon, title}:sidebarItemProps) {
+export default function SidebarItem({arr}:sidebarItemProps) {
 
+    const location = useLocation();
+    const isActive = location.pathname.replace("%20", " ") === `/${arr[0].toLowerCase()}`;
 
     return (
         <>
-            <Link to={`/${title.toLowerCase()}`}>
-                <li className="sidebar_item">
+            <Link to={`/${arr[0].toLowerCase()}`}>
+                <li className={`sidebar_item ${isActive && "active-link"}` }>
                     <div className="icon-wrapper-medium">
-                        <img src={icon} className="icon" alt={title} />
+                        <img src={arr[1]} className="icon" alt={arr[0]} title={arr[0]}/>
                     </div>
-                    <span className="sidebar_item-title">{title}</span>
+                    <span className="text-3">{arr[0]}</span>
                 </li>
             </Link>
         </>

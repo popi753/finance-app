@@ -1,5 +1,28 @@
 :root {
+  --beige-100: #F8F4F0;
+
+
+  --grey-900: #201F24;
+  --grey-300: #B3B3B3;
+
+
+  --green: #277C78;
+
+
+
+
   font-size: 10px;
+
+  --spacing-500: 4rem;
+  --spacing-400:  3.2rem;
+  --spacing-300:  2.4rem;
+  --spacing-250:  2rem;
+  --spacing-200:  1.6rem;
+  --spacing-150:  1.2rem;
+  --spacing-100:  0.8rem;
+  --spacing-50: 0.4rem;
+
+
 }
 
 body {
@@ -12,13 +35,12 @@ body {
   min-height: 100vh;
   margin: 0;
 
+
   font-family: "public sans", system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
   letter-spacing: 0;
   color-scheme: light dark;
-
-  background-color: #ffffff;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -34,7 +56,7 @@ body {
 
   width: 100%;
 
-  background-color: #ffffff;
+  background-color: var(--beige-100);
 }
 
 
