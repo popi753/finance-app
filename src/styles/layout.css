@@ -1,0 +1,10 @@
+.aside{
+    display: flex;
+    flex-direction: column;
+
+    width: 20%;
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+
+    background-color: black;
+}
