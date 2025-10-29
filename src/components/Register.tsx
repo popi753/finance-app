@@ -10,7 +10,7 @@ import eye from "../assets/svg/eye.svg";
 import {type authProps } from "./Login"
 
 type error = {
-    name: string,
+    username: string,
     email: string,
     password: string,
 };
@@ -19,18 +19,18 @@ export default function Register({ setHaveAcc }: authProps) {
 
     const [_loggedIn, setLoggedIn] = useContext<contextType>(UserContext) || [];
 
-    const [error, setError] = useState<error>({name:"", email: "", password: "" });
+    const [error, setError] = useState<error>({username:"", email: "", password: "" });
 
     const handleSubmit = useCallback((e: React.FormEvent) => {
         e.preventDefault();
-        setError({name: "", email: "", password: "" });
+        setError({username: "", email: "", password: "" });
 
         const form = e.target as HTMLFormElement;
         const formData = new FormData(form);
 
         let errorExist = false;
 
-        if (form.name.value === "" || form.name.value.length < 3) {
+        if (form.username.value === "" || form.username.value.length < 3) {
             setError(prev => ({ ...prev, name: "Name must be at least 3 characters long" }));
             errorExist = true;
         };
@@ -67,10 +67,10 @@ export default function Register({ setHaveAcc }: authProps) {
                     <div className="auth-form_inputs-container">
                         <Input 
                                  type='text'
-                                 id="name"
+                                 id="username"
                                  placeholder='Name'
                                  required={true}
-                                 error={error.name}
+                                 error={error.username}
                                  minLength={3}
                                   />
 
