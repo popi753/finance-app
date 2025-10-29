@@ -1,11 +1,20 @@
+.icon-wrapper-s{
+    width: 1.6rem;
+    height: 1.6rem;
+}
+
 .icon-wrapper-m{
     width: 2.4rem;
     height: 2.4rem;
 }
 
-
-
 .icon-wrapper-logo{
     width: 12rem;
     height: 2rem;
+}
+
+.icon-wrapper-s
+,.icon-wrapper-m
+,.icon-wrapper-logo{
+    cursor: pointer;
 }

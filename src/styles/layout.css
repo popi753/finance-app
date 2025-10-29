@@ -44,6 +44,7 @@
     padding: var(--spacing-200) var(--spacing-400);
     margin-right: var(--spacing-300);
 
+    cursor: pointer;
 }
 
 .active-link{
@@ -62,7 +63,7 @@
 
 .sidebar_item:last-child{
     margin-top: auto;
-    cursor: pointer;
+    
 }
 
 

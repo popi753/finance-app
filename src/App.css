@@ -1,12 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&display=swap');
+
+
 :root {
+
+  --white: #FFFFFF;
+
   --beige-100: #F8F4F0;
+  --beige-500: #98908B;
+
 
 
   --grey-900: #201F24;
+  --grey-500: #696868;
   --grey-300: #B3B3B3;
 
 
   --green: #277C78;
+
+  --red:#C94736;
 
 
 
@@ -46,6 +57,10 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; 
+
+  >{
+    transition: all 0.3s ease;
+  }
 }
 
 #root {

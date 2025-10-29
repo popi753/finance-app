@@ -1,0 +1,51 @@
+.input-wrapper {
+  position: relative;
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.auth-label{
+  color: var(--grey-500);
+}
+
+
+.auth-input {
+  flex:1;
+
+  height: 4.5rem;
+  padding: var(--spacing-150);
+
+  color: black;
+  background-color: var(--white);
+
+  border: 1px solid var(--beige-500);
+  border-radius: var(--spacing-100);
+}
+
+.auth-input[type="password"] {
+  padding-right: var(-spacing-400);
+  padding-right: 3.2rem;
+
+}
+
+.input-wrapper > .icon-wrapper-s{
+    position: absolute;
+    right: 0.8rem;
+    top: 40%;
+    transform: translateY(45%);
+}
+
+
+.input-error{
+    border: 1px solid var(--red);
+}
+
+.error-msg{
+  height: 1rem;
+
+  color: var(--red);
+}
+
