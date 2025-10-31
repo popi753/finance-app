@@ -4,7 +4,7 @@
 
     text-align: left;
 
-    width: 30%;
+    width: 25%;
     border-top-right-radius: var(--spacing-200);
     border-bottom-right-radius: var(--spacing-200);
 
@@ -28,11 +28,6 @@
     .icon-wrapper-logo{
         padding: var(--spacing-500) var(--spacing-400);
     }
-}
-
-.sidebar_list{
-
-    
 }
 
 .sidebar_item{
@@ -63,7 +58,14 @@
 
 .sidebar_item:last-child{
     margin-top: auto;
+}
+
+
+.main-container{
+    flex: 1;
+    display: flex;
     
+    padding: var(--spacing-400) var(--spacing-500);
 }
 
 

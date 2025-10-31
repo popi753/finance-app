@@ -7,6 +7,15 @@
     margin-bottom: 0.1rem;
 }
 
+.text-2{
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 120%;
+
+    letter-spacing: 0rem;
+    margin-bottom: 0.1rem;
+}
+
 .text-3{
     font-size: 1.6rem;
     font-weight: 700;
@@ -36,4 +45,17 @@
 
 .text-bold{
     font-weight: 700;
+}
+
+
+.text-dark{
+    color: var(--grey-900);
+}
+
+.text-light{
+    color: var(--grey-500);
+}
+
+.text-green{
+    color: var(--green);
 }
