@@ -14,21 +14,30 @@
 }
 
 .icon-wrapper-xl{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    width: 4rem;
+width: 4rem;
     height: 4rem;
 }
 
 .icon-wrapper-logo{
     width: 12rem;
-    height: 2rem;
+    height: 2.4rem;
+    
 }
 
-.icon-wrapper-s
+.icon-wrapper-xs
+,.icon-wrapper-s
 ,.icon-wrapper-m
+,.icon-wrapper-xl
+,.icon-wrapper-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-wrapper-xs
+,.icon-wrapper-s
+,.icon-wrapper-m
+,.icon-wrapper-xl
 ,.icon-wrapper-logo{
     cursor: pointer;
 }

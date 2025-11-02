@@ -26,6 +26,8 @@ export default function OverviewPageRecurringBills() {
                 <OverviewPageRecurringBillsItem key={index} {...item} />
             ))}
 
+            
+
             </ul>
         </div>
     )

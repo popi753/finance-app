@@ -11,6 +11,7 @@ import transactions from "../assets/svg/transactions.svg"
 import budgets from "../assets/svg/budgets.svg"
 import pots from "../assets/svg/pots.svg"
 import recurring from "../assets/svg/recurring bills.svg"
+import logOut from "../assets/svg/log out.svg"
 import minimize from "../assets/svg/minimize.svg"
 
 import "../styles/layout.css"
@@ -31,13 +32,11 @@ export default function Layout() {
     const [loggedIn, setLoggedIn] = useContext<contextType>(UserContext) || [null, () => { }];
     
 
-    const [open,setOpen] = useState<boolean>(true);
-
+    const [fullOpen,setFullOpen] = useState<boolean>(true);
 
     return (
         <>
-            {open && 
-            <aside className="aside">
+            <aside className={`aside ${!fullOpen ? "aside-minimized" : ""}`}>
                 <nav className="sidebar">
                     <div className="icon-wrapper-logo">
                         <img src={logo} className="icon-logo" alt="Logo" />
@@ -52,25 +51,28 @@ export default function Layout() {
 
                     
 
-                    {loggedIn && <div className="sidebar_minimize sidebar_item" onClick={()=>{
+                    {loggedIn && <div className="sidebar_item" onClick={()=>{
                         navigate("/")
                         setLoggedIn(false);
                         window.localStorage.removeItem("token");
                     }}>
+                        <div className="icon-wrapper-m log-out-icon">
+                            <img src={logOut} className="icon-logo" alt="Logo" />
+                        </div>
                         <span className="text-3">Log out</span>
                     </div>
                     }
                     <div className="sidebar_minimize sidebar_item" onClick={()=>{
-                        setOpen(prev=>!prev)
+                        setFullOpen(prev=>!prev)
                     }}>
                         <div className="icon-wrapper-m">
-                            <img src={minimize} alt="minimize" title="Minimize"/>
+                            <img src={minimize} alt="change menu" title="change menu's size"/>
                         </div>
                         <span className="text-3">Minimize Menu</span>
                     </div>
                 </nav>
             </aside>
-            }
+
             <main className="main-container">
                 <Outlet />
             </main>

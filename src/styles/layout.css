@@ -1,4 +1,10 @@
 .aside{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 100;
+    
     display: flex;
     flex-direction: column;
 
@@ -11,8 +17,36 @@
     color: var(--grey-300);
     background-color: var(--grey-900);
 
-    padding-bottom: 24px;
+    span{
+        text-wrap: nowrap; 
+        overflow: hidden;
+    }
+    .icon-wrapper-m{
+        margin-top: 0.1rem;
+    }
     
+}
+
+.aside-minimized{
+    width: 8.8rem;
+
+
+    span{
+        display: none;
+    }
+
+    .sidebar_minimize>.icon-wrapper-m{
+        transition: transform 0.5s ease;
+        transform: rotate(180deg);
+    }
+
+    .icon-wrapper-logo{
+        width: 2.4rem;
+        height: 2.4rem;
+        img{
+            content: url("../assets/svg/finance-logo-minimized.svg");
+        }
+    }
 }
 
 .sidebar{
@@ -21,7 +55,6 @@
     display: flex;
     flex-direction:column;
     gap: var(--spacing-300);
-
     
     padding-bottom: 24px;
 
@@ -55,6 +88,13 @@
     }
 }
 
+.log-out-icon{
+    transform: rotate(180deg);
+    img{
+        width: 2rem;
+        height: 2rem;
+    }
+}
 
 .sidebar_item:last-child{
     margin-top: auto;
@@ -65,7 +105,12 @@
     flex: 1;
     display: flex;
     
+    margin-left: 25%; 
     padding: var(--spacing-400) var(--spacing-500);
+}
+
+.aside-minimized ~ .main-container {
+    margin-left: 8.8rem;
 }
 
 

@@ -12,8 +12,8 @@ export default function SidebarItem({arr}:sidebarItemProps) {
     return (
         <>
             <Link to={`/${arr[0].toLowerCase()}`}>
-                <li className={`sidebar_item ${isActive && "active-link"}` }>
-                    <div className="icon-wrapper-medium">
+                <li className={`sidebar_item ${isActive ? "active-link" : ""}` }>
+                    <div className="icon-wrapper-m">
                         <img src={arr[1]} className="icon" alt={arr[0]} title={arr[0]}/>
                     </div>
                     <span className="text-3">{arr[0]}</span>
