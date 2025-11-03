@@ -23,13 +23,13 @@ export default function OverviewPagePots() {
                 </div>
                 <ul className="overview-page_pots_small-savings">
                         <div className="overview-page_pots_small-savings_first-row">
-                            <OverviewPagePotsTab title='Saving' amount={159}/>
-                            <OverviewPagePotsTab title='Gift' amount={159}/>
+                            <OverviewPagePotsTab label='Saving' value={159}/>
+                            <OverviewPagePotsTab label='Gift' value={159}/>
                         </div>
                         <div className="overview-page_pots_small-savings_second-row">
                             
-                            <OverviewPagePotsTab title='Concert Ticket' amount={159}/>
-                            <OverviewPagePotsTab title='New Laptop' amount={159}/>
+                            <OverviewPagePotsTab label='Concert Ticket' value={159}/>
+                            <OverviewPagePotsTab label='New Laptop' value={159}/>
                         </div>
 
                 </ul>
@@ -44,19 +44,19 @@ export default function OverviewPagePots() {
 
 
 type OverviewPagePotsTabProps = {
-    title:string;
-    amount: number;
+    label:string;
+    value: number;
 }
 
 
-export function OverviewPagePotsTab({title,amount}:OverviewPagePotsTabProps) {
+export function OverviewPagePotsTab({label,value}:OverviewPagePotsTabProps) {
     return (
         <li className="overview-page_pots_small-savings_tab">
             <div className="overview-page_pots_small-savings_tab_line">
             </div>
             <div className="overview-page_pots_small-savings_tab_details">
-                    <span className="text-5">{title}</span>
-                    <span className="text-4 text-bold">${amount}</span>
+                    <span className="text-5">{label}</span>
+                    <span className="text-4 text-bold">${value}</span>
             </div>
             
         </li>

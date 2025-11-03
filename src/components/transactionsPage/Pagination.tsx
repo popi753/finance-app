@@ -28,7 +28,7 @@ export default function Pagination({ page, setPage, pageArr }: paginationProps){
 
                                 {pageArr.map((pageNum, index) => {
                                     if (pageNum === '...') {
-                                        return <button key={index} className="transactions-page_pagination-placeholder">...</button>;
+                                        return <button key={index} className="transactions-page_pagination-placeholder text-dark">...</button>;
                                     }
                                     return (
                                             <Link key={index} to={`?page=${pageNum}`} onClick={() => setPage(String(pageNum))} className={'transactions-page_pagination-btn' + (page === String(pageNum) ? " transactions-page_pagination-active-btn" : "")}>

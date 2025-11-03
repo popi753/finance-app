@@ -12,6 +12,8 @@
     gap: var(--spacing-200);
 
     padding: var(--spacing-100) 0;
+
+    
 }
 
 .overview-page_budgets_chart{
@@ -21,15 +23,15 @@
     align-items: center;
     align-self: center;
 
-    width:  clamp(15rem, 30%, 20rem);
-    height: clamp(15rem, 30%, 20rem);
+    width:  100%;
+    height: 100%;
+}
 
-
-
-
-    border: 2rem solid var(--green);
-    border-radius: 50%;
-
+.overview-page_budgets_chart-text{
+    text-anchor: middle;
+    user-select: text;
+    -webkit-user-select: text;
+    cursor: text;
 }
 
 .overview-page_budgets_list{
