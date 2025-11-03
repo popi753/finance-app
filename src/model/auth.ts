@@ -55,7 +55,6 @@ export async function onLogin({ formData }: onLoginProps) {
   //   if (!response.ok) {
   //     const result = await response.json();
   //     throw result.errors;
-
   //   };
   //   const result = await response.json();
   //   window.localStorage.setItem("token", result.token);

@@ -1,0 +1,129 @@
+.transactions-page_content{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-300);
+
+    padding: var(--spacing-400);
+
+    background-color: var(--white);
+
+    border-radius: var(--spacing-150);
+}
+
+.transactions-page_input-field{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.transactions-page_sort-wrapper{
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    gap: var(--spacing-300);
+
+}
+
+
+.transactions-page_table{
+    width: 100%;
+
+    border-collapse: collapse;
+    tr{
+        border-bottom: 0.1rem solid var(--grey-100);
+    }
+    th{
+        padding: var(--spacing-150) var(--spacing-200);
+        font: inherit;
+    }
+    tbody{
+        margin-top: var(--spacing-100);
+    }
+    td:first-child{
+        display: flex;
+        align-items: center;
+        gap: var(--spacing-150);
+    }
+    td{
+        text-align: left;
+        vertical-align: middle;
+
+        padding: var(--spacing-150) var(--spacing-200);
+    }
+    th:last-child,td:last-child{
+        text-align: right;
+    }
+}
+
+
+.transactions-page_pagination{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-top: var(--spacing-300);
+}
+
+
+.transactions-page_pagination-left
+,.transactions-page_pagination-right
+,.transactions-page_pagination-btn
+,.transactions-page_pagination-placeholder
+{
+        box-sizing: border-box;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: var(--spacing-200);
+
+        height: var(--spacing-500);
+
+        padding: var(--spacing-200);
+
+        background-color: transparent;
+
+        border: 0.1rem solid var(--beige-500);
+        border-radius: var(--spacing-100);
+}
+
+.transactions-page_pagination-placeholder{
+    padding: 1.4rem;
+}
+
+.transactions-page_pagination-numbers{
+    display: flex;
+    flex-direction: row;
+    gap: var(--spacing-100);
+}
+
+.transactions-page_pagination-left:hover
+,.transactions-page_pagination-right:hover
+,.transactions-page_pagination-btn:hover{
+    background-color: var(--grey-900);
+    img{
+        filter: invert(1);
+    }
+    span{
+        color: var(--white);
+    }
+}
+
+.transactions-page_pagination-btn{
+    width: var(--spacing-500);
+}
+
+.transactions-page_pagination-active-btn{
+    background-color: var(--grey-900);
+    span{
+        color: var(--white);
+    }
+}
+
+.transactions-page_pagination-disabled{
+    pointer-events: none;
+    opacity: 0.5;
+}

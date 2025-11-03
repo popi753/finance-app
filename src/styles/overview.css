@@ -1,12 +1,3 @@
-.overview-page{
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    gap: var(--spacing-400);
-
-    max-width: 144rem;
-}
 
 .overview-page_tabs-container{
     display: flex;

@@ -54,4 +54,10 @@ a{
   text-decoration: none;
 }
 
+button{
+  font: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
 
