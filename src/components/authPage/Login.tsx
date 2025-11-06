@@ -1,11 +1,11 @@
 import { useState, useContext, useCallback } from 'react';
 
-import { UserContext, type contextType } from "../App";
-import { onLogin } from '../model/auth';
+import { UserContext, type contextType } from "../../App";
+import { onLogin } from '../../model/auth';
 
 import Input from "./Input"
 
-import eye from "../assets/svg/eye.svg";
+import eye from "../../assets/svg/eye.svg";
 
 export type authProps = {
     setHaveAcc: React.Dispatch<React.SetStateAction<boolean>>;

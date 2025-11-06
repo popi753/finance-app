@@ -1,11 +1,11 @@
 import { useState} from 'react'
 
-import Login from '../components/Login'
-import Register from '../components/Register'
+import Login from '../components/authPage/Login'
+import Register from '../components/authPage/Register'
 
 import logo from '../assets/svg/finance-logo.svg'
 
-import '../styles/auth.css'
+import '../styles/authPage/auth.css'
 
 export default function Auth() {
     const [haveAcc, setHaveAcc] = useState<boolean>(true);
