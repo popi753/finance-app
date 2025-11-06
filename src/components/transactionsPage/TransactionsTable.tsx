@@ -1,8 +1,7 @@
-import reactIcon from '../../assets/react.svg'
 
 import {type transaction} from '../../model/transactions'
-
 import formatCurrency from '../../utils/formatCurrency';
+import reactIcon from '../../assets/react.svg'
 
 export default function TransactionsTable({data}: {data: transaction[]}){
 

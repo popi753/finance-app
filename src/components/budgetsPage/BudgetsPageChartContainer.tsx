@@ -1,5 +1,4 @@
-import OverviewPageBoxTitle from './OverviewPageBoxTitle';
-import { OverviewPagePotsTab } from './OverviewPagePots';
+
 
 import {
   pieArcClasses,
@@ -8,26 +7,31 @@ import {
 } from '@mui/x-charts/PieChart';
 import Box from '@mui/material/Box';
 
-import '../../styles/overviewPage/overviewPageBudgets.css'
 
-export default function OverviewPageBudgets() {
+import "../../styles/budgetsPage/budgetsChart.css"
+
+
+export default function BudgetsPageChartContainer() {
 
     const arr = [{
         id: 1,
         label: "Entertainment",
         value:  80,
-        color: "var(--red)"
+        color: "var(--red)",
+        limit: 150,
     },
     {
         id:2,
         label: "Bills",
         value:  10,
         color: "var(--purple)",
+        limit: 150,
     },{
         id:3,
         label: "Personal Care",
         value:  20,
         color: "var(--orange)",
+        limit: 150,
     },]
 
     const arr2 = [{
@@ -60,13 +64,10 @@ export default function OverviewPageBudgets() {
         color: "var(--orange)",
     },]
 
-    return (
-        <div className="overview-page_budgets overview-page_content-box">
-            <OverviewPageBoxTitle title='Budgets' details="See Details" link="/budgets"/>
-
-            <div className='overview-page_budgets_content'>
-                
-                <Box className='pie-chart_box'>
+    
+    return(
+        <div className="budgets-page_chart-container content-box">
+             <Box className='pie-chart_box'>
                         <PieChart
                                 sx={{
                                     [`.${pieClasses.series}[data-series="inner"] .${pieArcClasses.root}`]: {
@@ -91,8 +92,8 @@ export default function OverviewPageBudgets() {
                                     
                                 },
                                 ]}
-                                height={200}
-                                width={200}
+                                height={240}
+                                width={240}
                                 hideLegend
                                 slotProps={{
                                     tooltip: {
@@ -107,22 +108,40 @@ export default function OverviewPageBudgets() {
                             </text>
                         </PieChart>
 
-                </Box>
-
-                <ul className='overview-page_budgets_list'>
-                    {arr.map((item, index) => (
-                        <OverviewPagePotsTab key={index} {...item} />
-                    ))}
+             </Box>
+             <div className="budgets-page_chart-details">
+                <h2 className='text-2 text-dark'>Spending Summary</h2>
+                <ul className="budgets-page_chart-list">
+                    {arr.map((item, index)=>{
+                        return(<ChartItem key={index} {...item}/>)
+                    })}
                 </ul>
-
-            </div>
+             </div>
         </div>
     )
-};
+}
 
+type ChartItemProps = {
+    label: string,
+    value: number,
+    limit: number,
+}
 
+function ChartItem({label,value,limit}:ChartItemProps) {
 
-
-
-
-
+    return(
+        <li className="budgets-page_chart-item">
+            <div className="budgets-page_chart-item_title-container">
+                <div className="vertical-line">
+                </div>
+                <span className="text-4 text-light">{label}</span>
+            </div>
+            <div className="budgets-page_chart-item_amount">
+                    
+                    <span className="text-3 text-bold text-dark">${value}</span>
+                    <span className="text-3 text-light">{`of $${limit}`}</span>
+            </div>
+            
+        </li>
+    )
+}

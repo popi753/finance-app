@@ -1,0 +1,29 @@
+.budgets-page_title-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    >button.btn-primary{
+        width: fit-content; 
+    }
+}
+
+
+.budgets-page_content{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    gap: var(--spacing-500);
+
+    
+}
+
+
+.budgets-page_tabs-container{
+    flex: 1.5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: var(--spacing-300);
+
+}

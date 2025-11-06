@@ -56,8 +56,35 @@ a{
 
 button{
   font: inherit;
+  padding: 0;
   background: none;
   border: none;
   cursor: pointer;
 }
 
+details{
+  position: relative;
+	height: 100%;
+}
+
+details > summary {
+  list-style: none;        
+  cursor: pointer;
+}
+
+/* Chrome/Safari */
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Other browsers (Firefox supports ::marker) */
+details > summary::marker {
+  display: none;
+  color: transparent;
+  font-size: 0;
+}
+
+details > summary::before {
+  content: url(../src/assets/svg/dots.svg); 
+  vertical-align: middle;
+}

@@ -1,0 +1,53 @@
+.budgets-page_chart-container{
+    gap: var(--spacing-400);
+
+    height: 60rem;
+}
+
+
+.budgets-page_chart-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: var(--spacing-300);
+
+    width: 100%;
+}
+
+.budgets-page_chart-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: var(--spacing-200);
+
+    width: 100%;
+}
+
+
+.budgets-page_chart-item{
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    width: 100%;
+}
+
+.budgets-page_chart-item_title-container{
+    display: flex;
+    flex-direction: row;
+    gap: var(--spacing-200);
+}
+
+.budgets-page_chart-item_amount{
+    display: flex;
+    flex-direction: row;
+    gap: var(--spacing-100);
+
+}
+
+
+
+
