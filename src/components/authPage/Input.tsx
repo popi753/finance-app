@@ -1,6 +1,6 @@
 import { changeVisibility } from '../../utils/changeVisibility';
 
-import '../../styles/input.css'
+import '../../styles/authPage/input.css'
 
 type inputProps = {
     type: string;
