@@ -16,7 +16,7 @@ export async function onRegister({ user }: onRegisterProps) {
           method: "POST",
           headers: {
             "Accept": "application/json",
-            "Content-Yype" : "application/json",
+            "Content-Type" : "application/json",
           },
           body: JSON.stringify(user)
         });
@@ -51,7 +51,7 @@ export async function onLogin({ user }: onLoginProps) {
           method: "POST",
           headers: {
             "Accept": "application/json",
-            "content-type" : "application/json",
+            "Content-Type" : "application/json",
           },
           body: JSON.stringify(user)
         });
