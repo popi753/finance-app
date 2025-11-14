@@ -20,15 +20,28 @@ import './styles/text.css'
 import './styles/icons-wrappers.css'
 import './styles/button.css'
 
+export type contextType = null | [
+  loggedIn: boolean,
+  setLoggedIn: React.Dispatch<React.SetStateAction<boolean>>,
+];
+
+export const UserContext = createContext<contextType>(null);
+
 function App() {
   
   const [loggedIn, setLoggedIn] = useState<boolean>(false);
   
   useEffect(() => {
       const token = window.localStorage.getItem("token") || "";
-      onCheckProfile(token)
-        token && setLoggedIn(true);
-    }, []);
+      if (!loggedIn && token) {
+        onCheckProfile(token).then(() => {
+            setLoggedIn(true);
+        }).catch((error)=>{
+            console.log(error);
+            window.localStorage.removeItem("token");
+        });
+      }
+    }, [loggedIn]);
   
 
   return(
@@ -55,11 +68,6 @@ function App() {
   );
 };
 
-export type contextType = null | [
-  loggedIn: boolean,
-  setLoggedIn: React.Dispatch<React.SetStateAction<boolean>>,
-];
 
-export const UserContext = createContext<contextType>(null);
 
 export default App;

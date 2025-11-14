@@ -159,7 +159,9 @@ body {
   border-radius: 50%;
 }
 
-
+.cursor-wait{
+  cursor: wait !important;
+}
 
 
 .loader:after {
